@@ -4,6 +4,7 @@ import { QueryTransformer } from './query-transformer'
 
 export class PostgresQueryTransformer extends QueryTransformer {
   public preparePersistentValue(value:any, metadata: ColumnMetadata): any {
+    console.log('[typeorm-aurora-data-api-driver] preparePersistentValue', value, metadata)
     if (!value) {
       return value
     }
